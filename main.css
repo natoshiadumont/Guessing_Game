@@ -1,1 +1,49 @@
 /* Write your CSS code in this file */
+
+body{
+  background-image: url("images/question-background.jpg");
+  background-size: 100%;
+}
+main{
+  display:flex;
+  justify-content: center;
+}
+header{
+  position: fixed;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  height: 6%;
+  align-content: center;
+  color:red;
+  background-color: hotpink;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+footer{
+  position: fixed;
+  bottom:0px;
+  left: 0px;
+  right: 0px;
+  height: 6%;
+  align-content: center;
+  color:red;
+  background-color: hotpink;
+  
+}
+
+#guessing-blocks{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 20px;
+  border: red solid 5px;
+  background-color: hotpink
+}
+
