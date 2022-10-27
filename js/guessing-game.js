@@ -9,4 +9,3 @@ a user clicks a button or adds a guess to the input field.
 */
 
 //comment test 1
-//comment test 2
