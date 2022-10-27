@@ -8,5 +8,5 @@ a user clicks a button or adds a guess to the input field.
 
 */
 
-//comment test1
-//comment test2
+//comment test 1
+//comment test 2
