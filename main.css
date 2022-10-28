@@ -1,23 +1,41 @@
 /* Write your CSS code in this file */
 
+@font-face {
+  font-family: 'educational';
+  src: url("resources/fonts/Education\ Childsmart.ttf");
+}
+@font-face {
+  font-family: 'lemon-milk';
+  src: url("resources/fonts/LEMONMILK-Regular.otf");
+}
 body{
-  background-image: url("images/question-background.jpg");
+  background-image: url("resources/images/question-background.jpg");
   background-size: 100%;
+  margin: 0;
 }
 main{
   display:flex;
+  height:100vh;
   justify-content: center;
+  align-items: stretch;
 }
+
 header{
   position: fixed;
+  font-family: 'educational';
+  font-size: 8vh;
+  text-align: center;
+  align-items: center;
   top:0px;
   left: 0px;
   right: 0px;
-  height: 6%;
+  height: 10%;
   align-content: center;
-  color:red;
-  background-color: hotpink;
-  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  padding-top: 30px;
+  color:whitesmoke;
+  background-color: rgb(255, 105, 180);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
 }
 
 footer{
@@ -25,25 +43,109 @@ footer{
   bottom:0px;
   left: 0px;
   right: 0px;
-  height: 6%;
-  align-content: center;
+  height: 3%;
+  text-align: right;
   color:red;
   background-color: hotpink;
-  
+  font-size: 20px;
+  font-family: "educational";
+  padding-top: 10px;
+  padding-right: 10px;
 }
+
 
 #guessing-blocks{
   display:flex;
+  width: 75%;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  align-items:center;
+  
 }
 
 .block{
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  margin: 20px;
-  border: red solid 5px;
-  background-color: hotpink
+  height: 150px;
+  width: 150px;
+  border: hotpink solid 5px;
+  background-color: rgb(240, 241, 241);
+  border-radius:49% 51% 47% 53% / 24% 24% 76% 76%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+sidebar{
+  font-family: 'lemon-milk';
+  display:flex;
+  left: 0px;
+  flex-direction: column;
+  width:30%;
+  background-color:rgba(78, 211, 167, 0.536);
+  color:black;
+  justify-content: center;
+  padding: 2%;
+  padding-top:20px;
+  font-size: 12px;
+  background-color: rgb(159, 208, 251);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#rules > p{
+  background-color: hotpink;
+  height: auto;
+  text-align: center;
+  padding: 12px;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+#rules-title{
+  padding-top: 20%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#hint-text{
+}
+#guess-container{
+  display:flex;
+  flex-direction: column;
+  background-color:rgb(255, 255, 95);
+  align-items: center;
+  height: auto;
+  padding: 12px;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+sidebar > h1{
+  font-size: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+button{
+  display:flex;
+  flex-direction: column;
+  font-family: "lemon-milk";
+  padding: 5px;
+  background-color: transparent;
+  border:none;
+}
+
+#crystal-ball{
+  height:50px;
+  margin-top:20px;
+}
+#guess-input{
+  text-align: center;
+  font-size: 30px;
+  height: 90px;
+  width: 90px;
+  border: hotpink solid 5px;
+  background-color: rgb(240, 241, 241);
+  border-radius:49% 51% 47% 53% / 24% 24% 76% 76%;
+}

@@ -10,16 +10,33 @@
 
   <body>
     
-    <header>Guessing Game</header>
+    <header>
+      <div id="header-title">Guessing Game</div>
+    </header>
     <main>
-      <div id="hint">Here's a hint:</div>
-      <div id="crystal-ball-container"></div>     
-      <div id="guessing-blocks"> Take a guess:
-        <div class="block">block1</div>
-        <div class="block">block2</div>
-        <div class="block">block3</div>
-        <div class="block">block4</div>
-        <div class="block">block5</div>
+      <sidebar>
+        <div id="rules">
+          <h1 id="rules-title">RULES:</h1>
+          <p>1. Guess any number between 1-100 and type it into the pink box below.</p>
+          <p>2. Using the hints provided, continue guessing until you get the right number.</p>
+          <p>3. You only have five chances to guess the correct number, or you will have to start over.</p>
+          <p>4.You may reset the game at any point!</p>
+          <p>5. GOOD LUCK AND HAVE FUN!</p>  
+        </div>
+        <form id="guess-container">
+          <h1>Guess Below:</h1> 
+          <input id="guess-input" type="text">
+          <button><img id="crystal-ball" src="https://cdn-icons-png.flaticon.com/512/4330/4330605.png">Submit</button>
+        </form>
+      </div>
+      </sidebar>
+      <div id="hint-text">HINT TEXT</div>    
+      <div id="guessing-blocks">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
       </div>
     </main>
     <!-- <script src='js/guessing-game.js'></script> -->
