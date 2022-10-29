@@ -24,16 +24,22 @@ hintButton
 hintText
 */
 
- let answer = randomNum();
+ const answer = randomNum();
+ let submit = document.getElementById('submit');
  let guessInput = document.getElementById('guess-input');
  let guessButton = document.getElementById('crystal-ball');
- let resetButton = document.getElementById('reset');
+ let restartButton = document.getElementById('restart');
  let hintButton = document.getElementById('hint');
 
-//populate guesses into game
-console.log('connected');
-resetButton.addEventListener('click', ()=>{
-  console.log('This button works!');
+//create event listenter that refreshes page once you press the reset button
+
+restartButton.addEventListener('click', ()=>{
+  location.reload(true);
+  console.log('working')
 });
 
+//event listener pushes value of guess into each guess block
+guessButton.addEventListener('click', ()=>{
+  
+})
 
