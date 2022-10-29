@@ -9,13 +9,12 @@
   src: url("resources/fonts/LEMONMILK-Regular.otf");
 }
 body{
-  background-image: url("resources/images/question-background.jpg");
-  background-size: 100%;
+ 
   margin: 0;
 }
 main{
   display:flex;
-  height:100vh;
+  height:100%;
   justify-content: center;
   align-items: stretch;
 }
@@ -45,50 +44,52 @@ footer{
   right: 0px;
   height: 3%;
   text-align: right;
-  color:red;
+  
   background-color: hotpink;
   font-size: 20px;
-  font-family: "educational";
-  padding-top: 10px;
+  font-family: "lemon-milk";
   padding-right: 10px;
+  text-decoration: none;
+  color:white;
 }
 
-
-#guessing-blocks{
-  display:flex;
-  width: 75%;
+#guessing-blocks {
+  display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content:space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items:center;
-  
+  align-items: center;
+  min-height: 100px;
 }
 
-.block{
-  height: 150px;
-  width: 150px;
+.block {
+  height: 120px;
+  width: 120px;
   border: hotpink solid 5px;
   background-color: rgb(240, 241, 241);
-  border-radius:49% 51% 47% 53% / 24% 24% 76% 76%;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 49% 51% 47% 53% / 24% 24% 76% 76%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
 }
 
-sidebar{
+sidebar {
   font-family: 'lemon-milk';
-  display:flex;
-  left: 0px;
+  display: flex;
   flex-direction: column;
-  width:30%;
-  background-color:rgba(78, 211, 167, 0.536);
-  color:black;
+  align-items: center;
+  color: black;
+  max-width: 300px;
   justify-content: center;
-  padding: 2%;
-  padding-top:20px;
+  padding: 20px;
   font-size: 12px;
   background-color: rgb(159, 208, 251);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-
 #rules > p{
   background-color: hotpink;
   height: auto;
@@ -101,24 +102,38 @@ sidebar{
 }
 
 #rules-title{
-  padding-top: 20%;
   display: flex;
-  width: 100%;
   justify-content: center;
 }
-#hint-text{
+
+#game-display-container {
+  background-image: url("resources/images/question-background.jpg");
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 3%;
+  font-size: 50px;
+  color:rgb(34, 45, 93);
+  min-width: 0px;
+  width: 100%;
+  font-family: 'lemon-milk';
 }
 #guess-container{
   display:flex;
   flex-direction: column;
-  background-color:rgb(255, 255, 95);
+  background-color: rgb(22 30 87);
   align-items: center;
   height: auto;
   padding: 12px;
-  color: black;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  color: rgb(252, 252, 252);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   text-align: center;
   border-radius: 25px;
+  margin-top: 20px;
 }
 
 sidebar > h1{
@@ -133,6 +148,7 @@ button{
   font-family: "lemon-milk";
   padding: 5px;
   background-color: transparent;
+  color:white;
   border:none;
 }
 
@@ -140,12 +156,48 @@ button{
   height:50px;
   margin-top:20px;
 }
-#guess-input{
+#guess-input {
   text-align: center;
-  font-size: 30px;
+  font-size: 45px;
+  font-family: 'lemon-milk';
   height: 90px;
   width: 90px;
+  color:rgb(34, 45, 93);
   border: hotpink solid 5px;
   background-color: rgb(240, 241, 241);
-  border-radius:49% 51% 47% 53% / 24% 24% 76% 76%;
+  border-radius: 49% 51% 47% 53% / 24% 24% 76% 76%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#hint-text{
+  background-color: white;
+  padding:20px;
+  margin: 20px;
+  font-family: 'lemon-milk';
+  border-radius:25px;
+  margin-bottom: 100px;
+  color:rgb(34, 45, 93);
+  border: 5px solid rgb(159, 208, 251);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#game-options{
+  display:flex;
+  flex-direction: row;
+  color: rgb(22 30 87);
+  justify-content:center;
+}
+.game-option-button {
+  margin: 50px;
+  margin-top: 100px;
+  height: 60px;
+  width: 200px;
+  color: rgb(34, 45, 93);
+  background-color: aliceblue;
+  border-radius: 25px;
+  border: 5px solid rgb(159, 208, 251);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

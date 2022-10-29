@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    
+     <script src='js/guessing-game.js'></script>
     <header>
       <div id="header-title">Guessing Game</div>
     </header>
@@ -17,7 +17,7 @@
       <sidebar>
         <div id="rules">
           <h1 id="rules-title">RULES:</h1>
-          <p>1. Guess any number between 1-100 and type it into the pink box below.</p>
+          <p>1. Guess any number between 1 and 100 then type your geuess below.</p>
           <p>2. Using the hints provided, continue guessing until you get the right number.</p>
           <p>3. You only have five chances to guess the correct number, or you will have to start over.</p>
           <p>4.You may reset the game at any point!</p>
@@ -25,22 +25,28 @@
         </div>
         <form id="guess-container">
           <h1>Guess Below:</h1> 
-          <input id="guess-input" type="text">
+          <input id="guess-input" type="text" maxlength="3">
           <button><img id="crystal-ball" src="https://cdn-icons-png.flaticon.com/512/4330/4330605.png">Submit</button>
         </form>
       </div>
       </sidebar>
-      <div id="hint-text">HINT TEXT</div>    
-      <div id="guessing-blocks">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-      </div>
+      <div id="game-display-container">
+        <div id="hint-text">HINT TEXT</div>    
+          <div id="guessing-blocks">
+            <div class="block">1</div>
+            <div class="block">2</div>
+            <div class="block">3</div>
+            <div class="block">4</div>
+            <div class="block">5</div>
+          </div>
+          <div id="game-options">
+            <button id="reset" class="game-option-button">reset</button>
+            <button id="hint" class="game-option-button">Hint</button>
+          </div>
+        </div>  
+      </div>  
     </main>
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+ 
   <footer>Image by <a href="https://www.freepik.com/free-vector/hand-drawn-question-mark-pattern_26373357.htm#query=question%20mark&position=33&from_view=search&track=sph">Freepik</a></footer>
   </body>
 

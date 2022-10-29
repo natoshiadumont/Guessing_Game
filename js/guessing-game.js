@@ -8,4 +8,32 @@ a user clicks a button or adds a guess to the input field.
 
 */
 
-//comment test 1
+//create random number generator and variable to store it
+function randomNum(){
+  return Math.floor(Math.random(100) *100)
+ }
+
+
+
+/*make following variables:
+answer
+guess
+guessButton
+tryAgain
+hintButton
+hintText
+*/
+
+ let answer = randomNum();
+ let guessInput = document.getElementById('guess-input');
+ let guessButton = document.getElementById('crystal-ball');
+ let resetButton = document.getElementById('reset');
+ let hintButton = document.getElementById('hint');
+
+//populate guesses into game
+console.log('connected');
+resetButton.addEventListener('click', ()=>{
+  console.log('This button works!');
+});
+
+
