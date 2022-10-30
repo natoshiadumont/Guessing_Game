@@ -30,7 +30,7 @@ hintText
  let guessButton = document.getElementById('crystal-ball');
  let restartButton = document.getElementById('restart');
  let hintButton = document.getElementById('hint');
-
+ let guessArray = [... document.querySelector(".block").children];
 //create event listenter that refreshes page once you press the reset button
 
 restartButton.addEventListener('click', ()=>{
@@ -40,6 +40,6 @@ restartButton.addEventListener('click', ()=>{
 
 //event listener pushes value of guess into each guess block
 guessButton.addEventListener('click', ()=>{
-  
+
 })
 

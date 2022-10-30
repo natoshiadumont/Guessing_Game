@@ -9,7 +9,6 @@
   src: url("resources/fonts/LEMONMILK-Regular.otf");
 }
 body{
- 
   margin: 0;
 }
 main{
@@ -21,22 +20,27 @@ main{
 
 header{
   position: fixed;
-  font-family: 'educational';
+  font-family: 'lemon-milk';
   font-size: 8vh;
   text-align: center;
   align-items: center;
   top:0px;
   left: 0px;
   right: 0px;
-  height: 10%;
+  height: auto;
   align-content: center;
-  padding-top: 30px;
   color:whitesmoke;
   background-color: rgb(255, 105, 180);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
 }
-
+#header-title{
+  display:flex;
+  justify-content: center;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align: center;
+}
 footer{
   position: fixed;
   bottom:0px;
