@@ -16,7 +16,7 @@
       <sidebar>
         <div id="rules">
           <h1 id="rules-title">RULES:</h1>
-          <p>1. Guess any number between 1 and 100 then type your geuess below.</p>
+          <p>1. Guess any number between 1 and 100 then type your guess below. Press the crystal ball to submit prediction.</p>
           <p>2. Using the hints provided, continue guessing until you get the right number.</p>
           <p>3. You only have five chances to guess the correct number, or you will have to start over.</p>
           <p>4.You may reset the game at any point!</p>
@@ -25,12 +25,14 @@
         <form id="guess-container">
           <h1>Guess Below:</h1> 
           <input id="guess-input" type="text" maxlength="3">
-          <button><img id="crystal-ball" src="https://cdn-icons-png.flaticon.com/512/4330/4330605.png">Submit</button>
+         <img src="https://cdn-icons-png.flaticon.com/512/4330/4330605.png" id="crystal-ball" >
         </form>
       </div>
       </sidebar>
       <div id="game-display-container">
-        <div id="hint-text">Let's Get Started!</div>    
+        <div id="hint-container"></div>  
+          <div id="hint-text">Let's Get Started!</div>
+          <div id="hint-message"></div>
           <div id="guessing-blocks">
             <div id="guess1" class="block"></div>
             <div id="guess2" class="block"></div>

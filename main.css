@@ -29,7 +29,7 @@ header{
   right: 0px;
   height: auto;
   align-content: center;
-  color:whitesmoke;
+  color:white;
   background-color: rgb(255, 105, 180);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
@@ -160,8 +160,10 @@ button{
 }
 
 #crystal-ball{
-  height:50px;
+  height:60px;
   margin-top:20px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 #guess-input {
   text-align: center;
@@ -182,7 +184,7 @@ button{
   margin: 20px;
   font-family: 'lemon-milk';
   border-radius:25px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   color:rgb(34, 45, 93);
   border: 5px solid rgb(159, 208, 251);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -218,6 +220,7 @@ button{
   justify-content: space-evenly;
   text-align: center;
   padding:20px;
+  cursor:pointer;
 }
 
 #hint{
@@ -226,7 +229,22 @@ button{
   justify-content: space-evenly;
   text-align: center;
   padding:20px;
+  cursor:help;
+  
 }
 img{
   height: 50px;
 }
+
+#hint-message{
+  font-family: 'lemon-milk';
+  font-size: 30px;
+  color:white;
+  text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  height: 30px;
+}
+
+
+
