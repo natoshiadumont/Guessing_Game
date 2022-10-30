@@ -23,8 +23,10 @@ let hintButton = document.getElementById('hint');
 let blockCounter=1;
 let chancesRemaining=5;
 let hintText = document.getElementById('hint-text');
+let userInput = document.getElementById('guess-input');
 //create event listener that inputs guess in box
 console.log('answer:', answer);
+
 
 submitGuess.addEventListener('click', function inputGuess(){
   
@@ -37,7 +39,8 @@ submitGuess.addEventListener('click', function inputGuess(){
   if(playerWon || hintTitle.innerHTML === `Congratulations! You guessed the correct number: ${answer}!` ){
     hintTitle.innerHTML = `Congratulations! You guessed the correct number: ${answer}!`
     hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
-   document.getElementById(submitGuess).removeAttribute('disable');
+    document.getElementById(submitGuess).removeAttribute('disable');
+    document.getElementById('hint').removeAttribute('disable');
     return;
   }
   
@@ -64,19 +67,31 @@ submitGuess.addEventListener('click', function inputGuess(){
   else{
     hintMessage.innerHTML = 'Your guess must be a number between 1 - 100.';
   }
-
-
+  userInput.value = '';
 })
+userInput.addEventListener('keypress', (e)=>{
+  if(e.key === 'Enter'){
+  e.preventDefault(); 
+  submitGuess.click();
+  userInput.value = '';
+  }
+  
+})
+
+
 
 hintButton.addEventListener('click', ()=>{
   let hintMessage= document.getElementById('hint-message');
+  let lastGuess = Number(document.getElementById(`guess${blockCounter - 1}`).innerHTML);
   if(chancesRemaining >= 5){
     hintMessage.innerHTML = 'HINT: THE ANSWER IS A NUMBER BETWEEN 1 - 100';
     return;
   }
-  let lastGuess = Number(document.getElementById(`guess${blockCounter - 1}`).innerHTML);
-  
-  if(lastGuess <= answer + 10 && lastGuess > answer){
+  else if(chancesRemaining < 1){
+    hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
+    return;
+  }
+  else if(lastGuess <= answer + 10 && lastGuess > answer){
     hintMessage.innerHTML = 'HINT: You are super close! Try guessing a little lower!';
   }
   else if(lastGuess >= answer - 10 && lastGuess < answer){
