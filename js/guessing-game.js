@@ -20,45 +20,75 @@ hintText
  let submitGuess = document.getElementById('crystal-ball');
  let restartButton = document.getElementById('restart');
  let hintButton = document.getElementById('hint');
-let blockCounter=0;
-let chancesRemaining=6;
+let blockCounter=1;
+let chancesRemaining=5;
 let hintText = document.getElementById('hint-text');
 //create event listener that inputs guess in box
-
-submitGuess.addEventListener('click', ()=>{
-  chancesRemaining--;
-  blockCounter++;
-  function pluralS(num){
-    if(num === 0 || num > 1){
-      return 's';
-    }
-  }
+console.log('answer:', answer);
+submitGuess.addEventListener('click', function inputGuess(){
+  
   let guessInput = Number(document.getElementById('guess-input').value);
   let hintTitle = document.getElementById('hint-text');
   let hintMessage= document.getElementById('hint-message');
-  hintMessage.innerHTML = 'Your guess must be a number between 1 - 100.';
+  hintMessage.innerHTML = '';
   let guessHistory = document.getElementById(`guess${blockCounter}`);
   if(chancesRemaining < 1){
     hintTitle.innerHTML = 'Sorry, you are officially out of guesses.';
     hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
     return;
   }
-  if(guessInput >= 1 && guessInput <= 100){
-    guessHistory.innerHTML = guessInput;
-    if(guessInput === answer){
-      hintTitle.innerHTML = 'Congratulations! You guessed the correct number!'
+
+  else if(guessInput >= 1 && guessInput <= 100 && guessInput !== null){
+      if(guessInput === answer){
+        chancesRemaining--;
+        blockCounter++;
+      guessHistory.innerHTML = guessInput;
+      console.log(guessHistory.innerHTML)
+      hintTitle.innerHTML = `Congratulations! You guessed the correct number: ${answer}!`
       hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
       return;
     }
+    chancesRemaining--;
+    blockCounter++;
+    function inputGuess(){guessHistory.innerHTML = guessInput};
+    inputGuess();
+
   }
   else{
     hintMessage.innerHTML = 'Your guess must be a number between 1 - 100.';
-
   }
-  console.log(guessInput);
+
+
 })
+  
+hintButton.addEventListener('click', ()=>{
+  let hintMessage= document.getElementById('hint-message');
+  let lastGuess = Number(document.getElementById('guess-input').value);
+  if(chancesRemaining >= 5){
+    hintMessage.innerHTML = 'HINT: THE ANSWER IS A NUMBER BETWEEN 1 - 100';
+  }
+  else if(lastGuess >= 1 && lastGuess <= 100){
+    if(lastGuess <= answer + 10 && lastGuess > answer){
+      hintMessage.innerHTML = 'HINT: You are super close! Try guessing a little lower!';
+    }
+    else if(lastGuess >= answer - 10 && lastGuess < answer){
+      hintMessage.innerHTML = 'HINT: You are super close! Try guessing a little higher!';
+    }
+    else if(lastGuess <= answer + 20 && lastGuess > answer){
+      hintMessage.innerHTML = 'HINT: You are getting closer! Try guessing lower!';
+    }
+    else if(lastGuess >= answer - 20 && lastGuess < answer){
+      hintMessage.innerHTML = 'HINT: You are getting closer! Try guessing higher!';
+    }
+    else if(lastGuess < answer){
+      hintMessage.innerHTML = 'HINT: You are not close at all. Guess higher!';
+    }
+    else if(lastGuess > answer){
+      hintMessage.innerHTML = 'HINT: You are not close at all. Guess lower!';
+    }
+  }
 
-
+})
 
 
 //create random number generator and variable to store it
@@ -70,6 +100,7 @@ function randomNum(){
 
 restartButton.addEventListener('click', ()=>{
   location.reload();
-  blockCounter = 0;
+  blockCounter = 1;
   chancesRemaining = 5;
 });
+
