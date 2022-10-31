@@ -45,7 +45,7 @@ submitGuess.addEventListener('click', function inputGuess(){
   }
   
   else if(chancesRemaining < 1 && !playerWon){
-    hintTitle.innerHTML = `Sorry, you are officially out of guesses. The answer was: ${answer}`;
+    hintTitle.innerHTML = `Sorry, you are all out of guesses. The answer correct number is: ${answer}!`;
     hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
     return;
   }
