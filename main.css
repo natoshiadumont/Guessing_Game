@@ -215,7 +215,7 @@ button{
   justify-content: center;
   align-items: center;
   padding: 10px;
-  font-size: 30px;
+  font-size: large;
 }
 
 #restart{
@@ -263,14 +263,14 @@ img{
   #hint:hover{
     background-color: rgb(159, 208, 251);
     cursor: help;
-    font-size: large;
+    font-size: 35px;
     border:none;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -4px, rgba(0, 0, 0, 0.2) 0px -8px 0px inset;
   }
   #restart:hover{
     background-color: rgb(159, 208, 251);
     cursor: pointer;
-    font-size: large;
+    font-size: 35px;
     border:none;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -4px, rgba(0, 0, 0, 0.2) 0px -8px 0px inset;
   }
