@@ -45,7 +45,7 @@ submitGuess.addEventListener('click', function inputGuess(){
   }
   
   else if(chancesRemaining < 1 && !playerWon){
-    hintTitle.innerHTML = 'Sorry, you are officially out of guesses.';
+    hintTitle.innerHTML = `Sorry, you are officially out of guesses. The answer was: ${answer}`;
     hintMessage.innerHTML = 'Wanna Play Again? Click the restart Button.'
     return;
   }
@@ -77,8 +77,6 @@ userInput.addEventListener('keypress', (e)=>{
   }
   
 })
-
-
 
 hintButton.addEventListener('click', ()=>{
   let hintMessage= document.getElementById('hint-message');
