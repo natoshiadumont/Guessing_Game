@@ -31,9 +31,7 @@ header{
   align-content: center;
   color:white;
   background-color: rgb(255, 105, 180);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
-}
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  text-shadow: 2px 2px 2px 1px (0, 0, 0, 0.2);}
 
 #header-title{
   display:flex;
@@ -41,6 +39,7 @@ header{
   padding-top:10px;
   padding-bottom:10px;
   text-align: center;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 footer{
   position: fixed;
@@ -55,6 +54,7 @@ footer{
   padding-right: 10px;
   text-decoration: none;
   color:white;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 #creator-name{
@@ -112,7 +112,7 @@ sidebar {
 
 #rules-title{
   display: flex;
-  justify-content: center;
+  justify-content: center; text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 #game-display-container {
@@ -234,7 +234,6 @@ button{
   text-align: center;
   padding:20px;
   cursor:help;
-  
 }
 img{
   height: 50px;
@@ -242,17 +241,43 @@ img{
 
 #hint-message{
   font-family: 'lemon-milk';
-  font-size: 30px;
-  color:white;
-  text-shadow: 0 0 5px rgb(34, 45, 93), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #bcbee6, 0 0 30px #d9e0db, 0 0 40px #d9e3e7, 0 0 55px #e3e7e2, 0 0 75px #ffffff;
-  margin-bottom: 30px;
-  text-decoration: underline;
+  font-size: 40px;
+  justify-content: center;
+  color:hotpink;
+  margin-bottom: 50px;
   height: 30px;
+  text-shadow: 5px 5px 0px rgb(34, 45, 93);
 }
 
 #hint-container{
   margin-top: 100px;
+  height: 30px;
 }
 
 
 
+@media (hover:hover){
+  *{
+    cursor:default;
+  }
+  #hint:hover{
+    background-color: hotpink;
+    cursor: help;
+    font-size: large;
+    border:5px solid aliceblue;
+  }
+  #restart:hover{
+    background-color: hotpink;
+    cursor: pointer;
+    font-size: large;
+    border:5px solid aliceblue;
+  }
+  #rules > p:hover{
+    background-color: aliceblue;
+    cursor:default;
+    border: 5px solid rgb(34, 45, 93)
+  }
+  #crystal-ball:hover{
+    filter: drop-shadow(5px 5px 10px gray);
+  };
+}
