@@ -261,16 +261,18 @@ img{
     cursor:default;
   }
   #hint:hover{
-    background-color: hotpink;
+    background-color: rgb(159, 208, 251);
     cursor: help;
     font-size: large;
-    border:5px solid aliceblue;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -4px, rgba(0, 0, 0, 0.2) 0px -8px 0px inset;
   }
   #restart:hover{
-    background-color: hotpink;
+    background-color: rgb(159, 208, 251);
     cursor: pointer;
     font-size: large;
-    border:5px solid aliceblue;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -4px, rgba(0, 0, 0, 0.2) 0px -8px 0px inset;
   }
   #rules > p:hover{
     background-color: aliceblue;
@@ -278,6 +280,6 @@ img{
     border: 5px solid rgb(34, 45, 93)
   }
   #crystal-ball:hover{
-    filter: drop-shadow(5px 5px 10px gray);
+    filter: drop-shadow(5px 5px 10px aliceblue);
   };
 }
